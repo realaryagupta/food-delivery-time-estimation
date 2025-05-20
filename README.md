@@ -1,10 +1,10 @@
-# food_delivery_time_estimation
+# Food Delivery Time Prediction
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-A short description of the project.
+In this project i will try to make a model that predicts the time for a food to be delivered from the restaurant to the destination using ML and also combine the principles of MLOps like DVC and Experimentation Tracking.
 
 ## Project Organization
 

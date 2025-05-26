@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/a9adfe7777cd405f825178b507d121e3/artifacts
+end_time: 1748273316794
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: a9adfe7777cd405f825178b507d121e3
+run_name: amusing-gnu-68
+run_uuid: a9adfe7777cd405f825178b507d121e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316717
+status: 4
+tags: []
+user_id: aryagupta

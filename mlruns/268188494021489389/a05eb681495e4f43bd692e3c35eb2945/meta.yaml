@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/a05eb681495e4f43bd692e3c35eb2945/artifacts
+end_time: 1748273964775
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: a05eb681495e4f43bd692e3c35eb2945
+run_name: upbeat-perch-312
+run_uuid: a05eb681495e4f43bd692e3c35eb2945
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273491805
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/22b6f6644a3746ef83811a822a8ffe6c/artifacts
+end_time: 1748273316799
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 22b6f6644a3746ef83811a822a8ffe6c
+run_name: fortunate-mole-321
+run_uuid: 22b6f6644a3746ef83811a822a8ffe6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316718
+status: 4
+tags: []
+user_id: aryagupta

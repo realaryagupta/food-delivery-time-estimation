@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/2a80d4615c0f472190c8dba2c9698215/artifacts
+end_time: 1748273455576
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 2a80d4615c0f472190c8dba2c9698215
+run_name: bustling-lark-64
+run_uuid: 2a80d4615c0f472190c8dba2c9698215
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273452364
+status: 3
+tags: []
+user_id: aryagupta

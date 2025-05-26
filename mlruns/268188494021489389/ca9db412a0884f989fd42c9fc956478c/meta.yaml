@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/ca9db412a0884f989fd42c9fc956478c/artifacts
+end_time: 1748273316752
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: ca9db412a0884f989fd42c9fc956478c
+run_name: sedate-dove-176
+run_uuid: ca9db412a0884f989fd42c9fc956478c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316727
+status: 4
+tags: []
+user_id: aryagupta

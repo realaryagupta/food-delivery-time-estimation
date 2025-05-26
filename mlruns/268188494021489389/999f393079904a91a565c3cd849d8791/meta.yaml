@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/999f393079904a91a565c3cd849d8791/artifacts
+end_time: 1748273458214
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 999f393079904a91a565c3cd849d8791
+run_name: adaptable-cub-804
+run_uuid: 999f393079904a91a565c3cd849d8791
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273452357
+status: 3
+tags: []
+user_id: aryagupta

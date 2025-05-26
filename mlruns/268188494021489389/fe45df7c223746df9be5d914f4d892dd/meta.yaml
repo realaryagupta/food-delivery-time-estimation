@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/fe45df7c223746df9be5d914f4d892dd/artifacts
+end_time: 1748274097489
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: fe45df7c223746df9be5d914f4d892dd
+run_name: rambunctious-hog-330
+run_uuid: fe45df7c223746df9be5d914f4d892dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273822165
+status: 3
+tags: []
+user_id: aryagupta

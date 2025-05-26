@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/e422455493b54d98baeeeb4a36d8806d/artifacts
+end_time: 1748273470467
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: e422455493b54d98baeeeb4a36d8806d
+run_name: rumbling-goose-938
+run_uuid: e422455493b54d98baeeeb4a36d8806d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273462407
+status: 3
+tags: []
+user_id: aryagupta

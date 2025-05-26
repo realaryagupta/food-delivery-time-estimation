@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/d31dad4f520f43ed86520f736485e36c/artifacts
+end_time: 1748273459172
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: d31dad4f520f43ed86520f736485e36c
+run_name: glamorous-moth-77
+run_uuid: d31dad4f520f43ed86520f736485e36c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273456573
+status: 3
+tags: []
+user_id: aryagupta

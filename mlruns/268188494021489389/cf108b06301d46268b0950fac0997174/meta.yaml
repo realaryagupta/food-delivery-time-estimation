@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/cf108b06301d46268b0950fac0997174/artifacts
+end_time: 1748273884306
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: cf108b06301d46268b0950fac0997174
+run_name: mercurial-roo-689
+run_uuid: cf108b06301d46268b0950fac0997174
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273463111
+status: 3
+tags: []
+user_id: aryagupta

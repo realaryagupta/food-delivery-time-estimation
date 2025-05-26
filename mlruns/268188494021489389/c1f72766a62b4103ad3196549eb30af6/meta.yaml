@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/c1f72766a62b4103ad3196549eb30af6/artifacts
+end_time: 1748273461370
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: c1f72766a62b4103ad3196549eb30af6
+run_name: calm-sloth-839
+run_uuid: c1f72766a62b4103ad3196549eb30af6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273458945
+status: 3
+tags: []
+user_id: aryagupta

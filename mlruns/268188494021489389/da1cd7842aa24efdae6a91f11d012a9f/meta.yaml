@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/da1cd7842aa24efdae6a91f11d012a9f/artifacts
+end_time: 1748273491721
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: da1cd7842aa24efdae6a91f11d012a9f
+run_name: grandiose-hound-480
+run_uuid: da1cd7842aa24efdae6a91f11d012a9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273452353
+status: 3
+tags: []
+user_id: aryagupta

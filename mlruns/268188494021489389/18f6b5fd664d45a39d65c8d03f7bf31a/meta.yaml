@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/18f6b5fd664d45a39d65c8d03f7bf31a/artifacts
+end_time: 1748273463084
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 18f6b5fd664d45a39d65c8d03f7bf31a
+run_name: calm-cow-846
+run_uuid: 18f6b5fd664d45a39d65c8d03f7bf31a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273458268
+status: 3
+tags: []
+user_id: aryagupta

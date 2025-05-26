@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/b8062695a5d44dd38238f76a8eb9e440/artifacts
+end_time: 1748273888892
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: b8062695a5d44dd38238f76a8eb9e440
+run_name: victorious-chimp-790
+run_uuid: b8062695a5d44dd38238f76a8eb9e440
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273887082
+status: 3
+tags: []
+user_id: aryagupta

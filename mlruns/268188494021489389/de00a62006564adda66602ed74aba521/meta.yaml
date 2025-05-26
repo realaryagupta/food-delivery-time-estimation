@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/de00a62006564adda66602ed74aba521/artifacts
+end_time: 1748273456479
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: de00a62006564adda66602ed74aba521
+run_name: honorable-wren-898
+run_uuid: de00a62006564adda66602ed74aba521
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273455617
+status: 3
+tags: []
+user_id: aryagupta

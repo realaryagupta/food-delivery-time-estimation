@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/a159da6279094bbea37d22cd7ba05a1a/artifacts
+end_time: 1748273887046
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: a159da6279094bbea37d22cd7ba05a1a
+run_name: gentle-slug-801
+run_uuid: a159da6279094bbea37d22cd7ba05a1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273885483
+status: 3
+tags: []
+user_id: aryagupta

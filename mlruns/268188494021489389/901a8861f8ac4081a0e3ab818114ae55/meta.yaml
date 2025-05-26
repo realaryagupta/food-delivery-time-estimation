@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/901a8861f8ac4081a0e3ab818114ae55/artifacts
+end_time: 1748273462372
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 901a8861f8ac4081a0e3ab818114ae55
+run_name: dashing-duck-640
+run_uuid: 901a8861f8ac4081a0e3ab818114ae55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273452358
+status: 3
+tags: []
+user_id: aryagupta

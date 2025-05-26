@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/5fabd7a993e240ec820a6e43b084d9fb/artifacts
+end_time: 1748273939330
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 5fabd7a993e240ec820a6e43b084d9fb
+run_name: legendary-bat-308
+run_uuid: 5fabd7a993e240ec820a6e43b084d9fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273461436
+status: 3
+tags: []
+user_id: aryagupta

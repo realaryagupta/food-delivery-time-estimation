@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/7f69d62ce63a43a9bd93ae50b6f1101a/artifacts
+end_time: 1748273316734
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 7f69d62ce63a43a9bd93ae50b6f1101a
+run_name: marvelous-moose-413
+run_uuid: 7f69d62ce63a43a9bd93ae50b6f1101a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316719
+status: 4
+tags: []
+user_id: aryagupta

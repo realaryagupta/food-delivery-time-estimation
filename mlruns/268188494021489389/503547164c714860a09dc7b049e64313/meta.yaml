@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/503547164c714860a09dc7b049e64313/artifacts
+end_time: 1748273316742
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 503547164c714860a09dc7b049e64313
+run_name: trusting-bass-352
+run_uuid: 503547164c714860a09dc7b049e64313
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316724
+status: 4
+tags: []
+user_id: aryagupta

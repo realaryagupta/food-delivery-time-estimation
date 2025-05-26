@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/2d9d07be4d31499fa46baa5e92e80c83/artifacts
+end_time: 1748273316792
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 2d9d07be4d31499fa46baa5e92e80c83
+run_name: glamorous-hen-804
+run_uuid: 2d9d07be4d31499fa46baa5e92e80c83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316724
+status: 4
+tags: []
+user_id: aryagupta

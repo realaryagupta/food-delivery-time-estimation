@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/6bbb67b00a9f4829ad47a2be35abad79/artifacts
+end_time: 1748273316747
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 6bbb67b00a9f4829ad47a2be35abad79
+run_name: unleashed-robin-513
+run_uuid: 6bbb67b00a9f4829ad47a2be35abad79
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273316720
+status: 4
+tags: []
+user_id: aryagupta

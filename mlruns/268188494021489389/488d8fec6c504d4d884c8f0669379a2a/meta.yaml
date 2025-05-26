@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/488d8fec6c504d4d884c8f0669379a2a/artifacts
+end_time: 1748273455572
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 488d8fec6c504d4d884c8f0669379a2a
+run_name: charming-skink-289
+run_uuid: 488d8fec6c504d4d884c8f0669379a2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273452355
+status: 3
+tags: []
+user_id: aryagupta

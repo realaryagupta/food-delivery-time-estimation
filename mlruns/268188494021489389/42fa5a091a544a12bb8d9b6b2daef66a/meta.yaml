@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/42fa5a091a544a12bb8d9b6b2daef66a/artifacts
+end_time: 1748273459352
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 42fa5a091a544a12bb8d9b6b2daef66a
+run_name: rare-tern-546
+run_uuid: 42fa5a091a544a12bb8d9b6b2daef66a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273456499
+status: 3
+tags: []
+user_id: aryagupta

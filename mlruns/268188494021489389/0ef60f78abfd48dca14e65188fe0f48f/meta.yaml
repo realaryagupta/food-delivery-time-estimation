@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/0ef60f78abfd48dca14e65188fe0f48f/artifacts
+end_time: 1748273480647
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 0ef60f78abfd48dca14e65188fe0f48f
+run_name: abundant-eel-117
+run_uuid: 0ef60f78abfd48dca14e65188fe0f48f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273452360
+status: 3
+tags: []
+user_id: aryagupta

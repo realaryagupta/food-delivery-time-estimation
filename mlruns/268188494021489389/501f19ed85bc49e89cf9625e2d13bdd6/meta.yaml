@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/501f19ed85bc49e89cf9625e2d13bdd6/artifacts
+end_time: 1748273950700
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 501f19ed85bc49e89cf9625e2d13bdd6
+run_name: sneaky-ox-876
+run_uuid: 501f19ed85bc49e89cf9625e2d13bdd6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273470508
+status: 3
+tags: []
+user_id: aryagupta

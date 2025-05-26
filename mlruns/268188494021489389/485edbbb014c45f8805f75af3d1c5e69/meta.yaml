@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/268188494021489389/485edbbb014c45f8805f75af3d1c5e69/artifacts
+end_time: 1748273927011
+entry_point_name: ''
+experiment_id: '268188494021489389'
+lifecycle_stage: active
+run_id: 485edbbb014c45f8805f75af3d1c5e69
+run_name: respected-mare-435
+run_uuid: 485edbbb014c45f8805f75af3d1c5e69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748273488640
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/13853c47824c4163bdbe338ed8919d2f/artifacts
+end_time: 1749465342971
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 13853c47824c4163bdbe338ed8919d2f
+run_name: Best Model
+run_uuid: 13853c47824c4163bdbe338ed8919d2f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465108088
+status: 3
+tags: []
+user_id: aryagupta

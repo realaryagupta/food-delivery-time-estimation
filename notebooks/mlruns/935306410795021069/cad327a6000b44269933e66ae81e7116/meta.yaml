@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/cad327a6000b44269933e66ae81e7116/artifacts
+end_time: 1749464668328
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: cad327a6000b44269933e66ae81e7116
+run_name: sassy-finch-113
+run_uuid: cad327a6000b44269933e66ae81e7116
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464668297
+status: 4
+tags: []
+user_id: aryagupta

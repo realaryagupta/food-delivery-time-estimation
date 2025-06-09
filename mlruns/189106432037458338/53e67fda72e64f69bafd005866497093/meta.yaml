@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/53e67fda72e64f69bafd005866497093/artifacts
+end_time: 1749465167351
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 53e67fda72e64f69bafd005866497093
+run_name: youthful-loon-663
+run_uuid: 53e67fda72e64f69bafd005866497093
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465165030
+status: 3
+tags: []
+user_id: aryagupta

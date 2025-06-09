@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/13ff82e5b9e6471fbc4cecb7320a23bc/artifacts
+end_time: 1749464779544
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 13ff82e5b9e6471fbc4cecb7320a23bc
+run_name: wistful-fox-803
+run_uuid: 13ff82e5b9e6471fbc4cecb7320a23bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464729855
+status: 3
+tags: []
+user_id: aryagupta

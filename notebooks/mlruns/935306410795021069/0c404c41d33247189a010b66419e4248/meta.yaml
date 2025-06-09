@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/0c404c41d33247189a010b66419e4248/artifacts
+end_time: 1749464727618
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 0c404c41d33247189a010b66419e4248
+run_name: lyrical-cat-710
+run_uuid: 0c404c41d33247189a010b66419e4248
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464725045
+status: 3
+tags: []
+user_id: aryagupta

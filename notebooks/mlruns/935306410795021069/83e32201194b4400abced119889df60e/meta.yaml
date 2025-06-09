@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/83e32201194b4400abced119889df60e/artifacts
+end_time: 1749464731339
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 83e32201194b4400abced119889df60e
+run_name: gifted-panda-313
+run_uuid: 83e32201194b4400abced119889df60e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464725222
+status: 3
+tags: []
+user_id: aryagupta

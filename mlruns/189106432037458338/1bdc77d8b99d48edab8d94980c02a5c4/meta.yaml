@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/1bdc77d8b99d48edab8d94980c02a5c4/artifacts
+end_time: 1749465113757
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 1bdc77d8b99d48edab8d94980c02a5c4
+run_name: adventurous-wolf-249
+run_uuid: 1bdc77d8b99d48edab8d94980c02a5c4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465109190
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/17ebe394ad234b3cb5c77c7e1774b11c/artifacts
+end_time: 1749465119379
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 17ebe394ad234b3cb5c77c7e1774b11c
+run_name: rogue-grub-713
+run_uuid: 17ebe394ad234b3cb5c77c7e1774b11c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465116656
+status: 3
+tags: []
+user_id: aryagupta

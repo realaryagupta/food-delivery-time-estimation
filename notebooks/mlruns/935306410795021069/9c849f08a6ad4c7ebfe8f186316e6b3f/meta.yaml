@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/9c849f08a6ad4c7ebfe8f186316e6b3f/artifacts
+end_time: 1749464668359
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 9c849f08a6ad4c7ebfe8f186316e6b3f
+run_name: gifted-stork-489
+run_uuid: 9c849f08a6ad4c7ebfe8f186316e6b3f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464668303
+status: 4
+tags: []
+user_id: aryagupta

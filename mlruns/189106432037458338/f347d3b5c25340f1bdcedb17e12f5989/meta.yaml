@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/f347d3b5c25340f1bdcedb17e12f5989/artifacts
+end_time: 1749465113937
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: f347d3b5c25340f1bdcedb17e12f5989
+run_name: big-seal-379
+run_uuid: f347d3b5c25340f1bdcedb17e12f5989
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465111912
+status: 3
+tags: []
+user_id: aryagupta

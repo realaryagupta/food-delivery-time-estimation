@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/b007134e183c40db9e8e03e3f8ee6390/artifacts
+end_time: 1749465162310
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: b007134e183c40db9e8e03e3f8ee6390
+run_name: polite-seal-255
+run_uuid: b007134e183c40db9e8e03e3f8ee6390
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465116633
+status: 3
+tags: []
+user_id: aryagupta

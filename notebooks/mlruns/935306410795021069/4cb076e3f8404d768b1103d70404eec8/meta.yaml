@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/4cb076e3f8404d768b1103d70404eec8/artifacts
+end_time: 1749464776383
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 4cb076e3f8404d768b1103d70404eec8
+run_name: wise-trout-265
+run_uuid: 4cb076e3f8404d768b1103d70404eec8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464745600
+status: 3
+tags: []
+user_id: aryagupta

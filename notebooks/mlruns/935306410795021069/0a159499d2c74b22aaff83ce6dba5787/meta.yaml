@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/0a159499d2c74b22aaff83ce6dba5787/artifacts
+end_time: 1749464668349
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 0a159499d2c74b22aaff83ce6dba5787
+run_name: dazzling-koi-265
+run_uuid: 0a159499d2c74b22aaff83ce6dba5787
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464668300
+status: 4
+tags: []
+user_id: aryagupta

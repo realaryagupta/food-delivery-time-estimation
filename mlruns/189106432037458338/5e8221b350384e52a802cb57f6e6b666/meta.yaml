@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/5e8221b350384e52a802cb57f6e6b666/artifacts
+end_time: 1749465109047
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 5e8221b350384e52a802cb57f6e6b666
+run_name: secretive-roo-622
+run_uuid: 5e8221b350384e52a802cb57f6e6b666
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465108813
+status: 3
+tags: []
+user_id: aryagupta

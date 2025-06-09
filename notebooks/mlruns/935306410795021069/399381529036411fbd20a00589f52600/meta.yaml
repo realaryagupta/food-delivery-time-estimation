@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/399381529036411fbd20a00589f52600/artifacts
+end_time: 1749464668349
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 399381529036411fbd20a00589f52600
+run_name: nosy-conch-148
+run_uuid: 399381529036411fbd20a00589f52600
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464668303
+status: 4
+tags: []
+user_id: aryagupta

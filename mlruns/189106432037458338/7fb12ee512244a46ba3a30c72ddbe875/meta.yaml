@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/7fb12ee512244a46ba3a30c72ddbe875/artifacts
+end_time: 1749465116804
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 7fb12ee512244a46ba3a30c72ddbe875
+run_name: rare-doe-95
+run_uuid: 7fb12ee512244a46ba3a30c72ddbe875
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465113960
+status: 3
+tags: []
+user_id: aryagupta

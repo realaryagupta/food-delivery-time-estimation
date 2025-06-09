@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/c450a57f41df44169dab075b4730a07e/artifacts
+end_time: 1749465108734
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: c450a57f41df44169dab075b4730a07e
+run_name: suave-stag-826
+run_uuid: c450a57f41df44169dab075b4730a07e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465108130
+status: 3
+tags: []
+user_id: aryagupta

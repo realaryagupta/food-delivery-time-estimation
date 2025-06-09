@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/188359e8a81142bdbd3e01f2acc28fe8/artifacts
+end_time: 1749465109482
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 188359e8a81142bdbd3e01f2acc28fe8
+run_name: ambitious-shrimp-133
+run_uuid: 188359e8a81142bdbd3e01f2acc28fe8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465108139
+status: 3
+tags: []
+user_id: aryagupta

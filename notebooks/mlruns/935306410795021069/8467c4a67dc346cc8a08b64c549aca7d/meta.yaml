@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/8467c4a67dc346cc8a08b64c549aca7d/artifacts
+end_time: 1749464725083
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 8467c4a67dc346cc8a08b64c549aca7d
+run_name: amazing-toad-576
+run_uuid: 8467c4a67dc346cc8a08b64c549aca7d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464724756
+status: 3
+tags: []
+user_id: aryagupta

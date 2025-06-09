@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/c6038eae608d4576b467b7c78e853c68/artifacts
+end_time: 1749464725281
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: c6038eae608d4576b467b7c78e853c68
+run_name: bedecked-sow-472
+run_uuid: c6038eae608d4576b467b7c78e853c68
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464725087
+status: 3
+tags: []
+user_id: aryagupta

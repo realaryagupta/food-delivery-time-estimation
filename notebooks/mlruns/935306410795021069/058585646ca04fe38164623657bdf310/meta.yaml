@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/058585646ca04fe38164623657bdf310/artifacts
+end_time: 1749464865989
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 058585646ca04fe38164623657bdf310
+run_name: funny-yak-703
+run_uuid: 058585646ca04fe38164623657bdf310
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464734363
+status: 3
+tags: []
+user_id: aryagupta

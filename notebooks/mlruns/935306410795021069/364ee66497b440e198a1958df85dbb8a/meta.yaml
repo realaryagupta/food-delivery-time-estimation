@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/364ee66497b440e198a1958df85dbb8a/artifacts
+end_time: 1749464725216
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 364ee66497b440e198a1958df85dbb8a
+run_name: capricious-roo-735
+run_uuid: 364ee66497b440e198a1958df85dbb8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464723998
+status: 3
+tags: []
+user_id: aryagupta

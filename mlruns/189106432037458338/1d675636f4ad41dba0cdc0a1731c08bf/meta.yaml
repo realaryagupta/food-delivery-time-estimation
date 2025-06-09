@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/1d675636f4ad41dba0cdc0a1731c08bf/artifacts
+end_time: 1749465165391
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 1d675636f4ad41dba0cdc0a1731c08bf
+run_name: bustling-fox-914
+run_uuid: 1d675636f4ad41dba0cdc0a1731c08bf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465116843
+status: 3
+tags: []
+user_id: aryagupta

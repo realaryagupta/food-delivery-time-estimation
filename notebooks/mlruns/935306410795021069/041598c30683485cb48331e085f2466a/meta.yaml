@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/041598c30683485cb48331e085f2466a/artifacts
+end_time: 1749464725627
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 041598c30683485cb48331e085f2466a
+run_name: dapper-conch-79
+run_uuid: 041598c30683485cb48331e085f2466a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464723984
+status: 3
+tags: []
+user_id: aryagupta

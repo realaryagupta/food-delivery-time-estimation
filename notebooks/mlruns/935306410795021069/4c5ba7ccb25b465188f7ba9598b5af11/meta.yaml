@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/4c5ba7ccb25b465188f7ba9598b5af11/artifacts
+end_time: 1749464737301
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: 4c5ba7ccb25b465188f7ba9598b5af11
+run_name: angry-shrimp-644
+run_uuid: 4c5ba7ccb25b465188f7ba9598b5af11
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464728776
+status: 3
+tags: []
+user_id: aryagupta

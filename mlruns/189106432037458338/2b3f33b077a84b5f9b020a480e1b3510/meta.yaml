@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/2b3f33b077a84b5f9b020a480e1b3510/artifacts
+end_time: 1749465162572
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 2b3f33b077a84b5f9b020a480e1b3510
+run_name: nebulous-wolf-686
+run_uuid: 2b3f33b077a84b5f9b020a480e1b3510
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465162369
+status: 3
+tags: []
+user_id: aryagupta

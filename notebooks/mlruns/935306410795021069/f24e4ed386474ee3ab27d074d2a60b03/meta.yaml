@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/935306410795021069/f24e4ed386474ee3ab27d074d2a60b03/artifacts
+end_time: 1749464746666
+entry_point_name: ''
+experiment_id: '935306410795021069'
+lifecycle_stage: active
+run_id: f24e4ed386474ee3ab27d074d2a60b03
+run_name: judicious-bass-474
+run_uuid: f24e4ed386474ee3ab27d074d2a60b03
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749464729947
+status: 3
+tags: []
+user_id: aryagupta

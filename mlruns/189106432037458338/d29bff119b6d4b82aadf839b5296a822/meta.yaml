@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/d29bff119b6d4b82aadf839b5296a822/artifacts
+end_time: 1749465190498
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: d29bff119b6d4b82aadf839b5296a822
+run_name: rumbling-slug-34
+run_uuid: d29bff119b6d4b82aadf839b5296a822
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465147617
+status: 3
+tags: []
+user_id: aryagupta

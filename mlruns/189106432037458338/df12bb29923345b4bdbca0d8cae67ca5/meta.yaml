@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/df12bb29923345b4bdbca0d8cae67ca5/artifacts
+end_time: 1749465167743
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: df12bb29923345b4bdbca0d8cae67ca5
+run_name: selective-lynx-361
+run_uuid: df12bb29923345b4bdbca0d8cae67ca5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465165417
+status: 3
+tags: []
+user_id: aryagupta

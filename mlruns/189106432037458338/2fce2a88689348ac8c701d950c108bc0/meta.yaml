@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/2fce2a88689348ac8c701d950c108bc0/artifacts
+end_time: 1749465169981
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 2fce2a88689348ac8c701d950c108bc0
+run_name: rare-bat-258
+run_uuid: 2fce2a88689348ac8c701d950c108bc0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465111906
+status: 3
+tags: []
+user_id: aryagupta

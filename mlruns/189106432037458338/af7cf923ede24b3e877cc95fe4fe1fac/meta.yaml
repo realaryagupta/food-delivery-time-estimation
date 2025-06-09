@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/af7cf923ede24b3e877cc95fe4fe1fac/artifacts
+end_time: 1749465108792
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: af7cf923ede24b3e877cc95fe4fe1fac
+run_name: youthful-zebra-287
+run_uuid: af7cf923ede24b3e877cc95fe4fe1fac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465108131
+status: 3
+tags: []
+user_id: aryagupta

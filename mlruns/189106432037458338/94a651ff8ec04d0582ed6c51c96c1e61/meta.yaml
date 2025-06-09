@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/189106432037458338/94a651ff8ec04d0582ed6c51c96c1e61/artifacts
+end_time: 1749465342958
+entry_point_name: ''
+experiment_id: '189106432037458338'
+lifecycle_stage: active
+run_id: 94a651ff8ec04d0582ed6c51c96c1e61
+run_name: monumental-stoat-201
+run_uuid: 94a651ff8ec04d0582ed6c51c96c1e61
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749465111305
+status: 3
+tags: []
+user_id: aryagupta

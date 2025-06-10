@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/eaeece50fe784e4fb8a6c1012d580f31/artifacts
+end_time: 1749485924104
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eaeece50fe784e4fb8a6c1012d580f31
+run_name: caring-grouse-917
+run_uuid: eaeece50fe784e4fb8a6c1012d580f31
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485920650
+status: 3
+tags: []
+user_id: aryagupta

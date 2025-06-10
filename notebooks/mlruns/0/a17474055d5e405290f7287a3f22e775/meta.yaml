@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/a17474055d5e405290f7287a3f22e775/artifacts
+end_time: 1749485931770
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a17474055d5e405290f7287a3f22e775
+run_name: bedecked-tern-93
+run_uuid: a17474055d5e405290f7287a3f22e775
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485915403
+status: 3
+tags: []
+user_id: aryagupta

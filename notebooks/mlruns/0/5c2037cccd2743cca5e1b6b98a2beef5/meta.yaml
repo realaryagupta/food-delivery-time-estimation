@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/5c2037cccd2743cca5e1b6b98a2beef5/artifacts
+end_time: 1749485977533
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5c2037cccd2743cca5e1b6b98a2beef5
+run_name: rogue-elk-501
+run_uuid: 5c2037cccd2743cca5e1b6b98a2beef5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485915403
+status: 3
+tags: []
+user_id: aryagupta

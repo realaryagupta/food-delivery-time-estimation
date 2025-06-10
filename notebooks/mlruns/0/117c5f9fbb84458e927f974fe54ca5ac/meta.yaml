@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/117c5f9fbb84458e927f974fe54ca5ac/artifacts
+end_time: 1749485959326
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 117c5f9fbb84458e927f974fe54ca5ac
+run_name: brawny-mink-950
+run_uuid: 117c5f9fbb84458e927f974fe54ca5ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485932558
+status: 3
+tags: []
+user_id: aryagupta

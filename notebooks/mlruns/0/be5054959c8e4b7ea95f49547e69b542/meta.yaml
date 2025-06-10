@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/be5054959c8e4b7ea95f49547e69b542/artifacts
+end_time: 1749486031515
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: be5054959c8e4b7ea95f49547e69b542
+run_name: upbeat-midge-953
+run_uuid: be5054959c8e4b7ea95f49547e69b542
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485955787
+status: 3
+tags: []
+user_id: aryagupta

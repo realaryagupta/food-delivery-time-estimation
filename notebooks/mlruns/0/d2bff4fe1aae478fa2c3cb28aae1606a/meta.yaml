@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/d2bff4fe1aae478fa2c3cb28aae1606a/artifacts
+end_time: 1749485932554
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d2bff4fe1aae478fa2c3cb28aae1606a
+run_name: upbeat-crab-674
+run_uuid: d2bff4fe1aae478fa2c3cb28aae1606a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485915408
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/b12d02726a4e458a85bbdba7d2c7fbd7/artifacts
+end_time: 1749486089859
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b12d02726a4e458a85bbdba7d2c7fbd7
+run_name: bedecked-crane-96
+run_uuid: b12d02726a4e458a85bbdba7d2c7fbd7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485931784
+status: 3
+tags: []
+user_id: aryagupta

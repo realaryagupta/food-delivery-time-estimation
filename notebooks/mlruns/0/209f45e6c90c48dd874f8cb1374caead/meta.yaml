@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/209f45e6c90c48dd874f8cb1374caead/artifacts
+end_time: 1749485934408
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 209f45e6c90c48dd874f8cb1374caead
+run_name: casual-bear-842
+run_uuid: 209f45e6c90c48dd874f8cb1374caead
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485918490
+status: 3
+tags: []
+user_id: aryagupta

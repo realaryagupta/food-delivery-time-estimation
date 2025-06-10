@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/39d743d3152c40739122a3b6b09505d2/artifacts
+end_time: 1749485918485
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 39d743d3152c40739122a3b6b09505d2
+run_name: bald-moose-871
+run_uuid: 39d743d3152c40739122a3b6b09505d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485915394
+status: 3
+tags: []
+user_id: aryagupta

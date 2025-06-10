@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/e56ce75ef9ec42a89d336012a19b5d26/artifacts
+end_time: 1749485917056
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e56ce75ef9ec42a89d336012a19b5d26
+run_name: bemused-stoat-692
+run_uuid: e56ce75ef9ec42a89d336012a19b5d26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485915405
+status: 3
+tags: []
+user_id: aryagupta

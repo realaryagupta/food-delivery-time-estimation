@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/556109085172490767
+creation_time: 1749486569798
+experiment_id: '556109085172490767'
+last_update_time: 1749486569798
+lifecycle_stage: active
+name: Exp 4.4 - Light GBM Hyperparam Tuning

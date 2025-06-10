@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/6841b3f146e44724ac5a4e44c3b99f89/artifacts
+end_time: 1749485938267
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6841b3f146e44724ac5a4e44c3b99f89
+run_name: serious-bird-430
+run_uuid: 6841b3f146e44724ac5a4e44c3b99f89
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485928127
+status: 3
+tags: []
+user_id: aryagupta

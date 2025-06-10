@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aryagupta/Desktop/food-delivery-estimation/food_time_prediction_using_mlops/notebooks/mlruns/0/2d71d631505d4f96abe6b4fd84e348a7/artifacts
+end_time: 1749485920640
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2d71d631505d4f96abe6b4fd84e348a7
+run_name: aged-trout-782
+run_uuid: 2d71d631505d4f96abe6b4fd84e348a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749485915396
+status: 3
+tags: []
+user_id: aryagupta

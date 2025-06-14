@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/09da8543c2bb4559b16c0e4e92d00d4f/artifacts
+end_time: 1749623661028
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 09da8543c2bb4559b16c0e4e92d00d4f
+run_name: auspicious-tern-404
+run_uuid: 09da8543c2bb4559b16c0e4e92d00d4f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653403
+status: 3
+tags: []
+user_id: aryagupta

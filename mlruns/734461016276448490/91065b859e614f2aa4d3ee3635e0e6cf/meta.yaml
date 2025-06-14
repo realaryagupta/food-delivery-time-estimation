@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/91065b859e614f2aa4d3ee3635e0e6cf/artifacts
+end_time: 1749623669715
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 91065b859e614f2aa4d3ee3635e0e6cf
+run_name: incongruous-mink-908
+run_uuid: 91065b859e614f2aa4d3ee3635e0e6cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653396
+status: 3
+tags: []
+user_id: aryagupta

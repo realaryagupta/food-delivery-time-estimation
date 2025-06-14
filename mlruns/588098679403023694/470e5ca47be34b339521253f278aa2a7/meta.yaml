@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/470e5ca47be34b339521253f278aa2a7/artifacts
+end_time: 1749578557231
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 470e5ca47be34b339521253f278aa2a7
+run_name: selective-carp-618
+run_uuid: 470e5ca47be34b339521253f278aa2a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578297985
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/8c5f73a322f14d7f9ba87641d62f72a5/artifacts
+end_time: 1749578558604
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 8c5f73a322f14d7f9ba87641d62f72a5
+run_name: useful-seal-279
+run_uuid: 8c5f73a322f14d7f9ba87641d62f72a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578300985
+status: 3
+tags: []
+user_id: aryagupta

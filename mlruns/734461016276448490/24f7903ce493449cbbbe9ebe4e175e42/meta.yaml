@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/24f7903ce493449cbbbe9ebe4e175e42/artifacts
+end_time: 1749623695713
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 24f7903ce493449cbbbe9ebe4e175e42
+run_name: dashing-panda-736
+run_uuid: 24f7903ce493449cbbbe9ebe4e175e42
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623681398
+status: 3
+tags: []
+user_id: aryagupta

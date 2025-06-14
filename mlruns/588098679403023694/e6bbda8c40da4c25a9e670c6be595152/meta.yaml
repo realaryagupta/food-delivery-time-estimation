@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/e6bbda8c40da4c25a9e670c6be595152/artifacts
+end_time: 1749578549576
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: e6bbda8c40da4c25a9e670c6be595152
+run_name: adventurous-worm-191
+run_uuid: e6bbda8c40da4c25a9e670c6be595152
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578294767
+status: 3
+tags: []
+user_id: aryagupta

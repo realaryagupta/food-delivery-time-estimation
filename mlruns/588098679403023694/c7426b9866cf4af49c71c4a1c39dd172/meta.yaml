@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/c7426b9866cf4af49c71c4a1c39dd172/artifacts
+end_time: 1749578554727
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: c7426b9866cf4af49c71c4a1c39dd172
+run_name: nimble-mule-280
+run_uuid: c7426b9866cf4af49c71c4a1c39dd172
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578298567
+status: 3
+tags: []
+user_id: aryagupta

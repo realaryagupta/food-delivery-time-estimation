@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/73a01b945e564e7e930f96883888fa8a/artifacts
+end_time: 1749578544215
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 73a01b945e564e7e930f96883888fa8a
+run_name: likeable-cow-904
+run_uuid: 73a01b945e564e7e930f96883888fa8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578289940
+status: 3
+tags: []
+user_id: aryagupta

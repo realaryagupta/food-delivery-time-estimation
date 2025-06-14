@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/dcfa533e0e894731874c672fffc0f772/artifacts
+end_time: 1749578295401
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: dcfa533e0e894731874c672fffc0f772
+run_name: hilarious-koi-510
+run_uuid: dcfa533e0e894731874c672fffc0f772
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578076140
+status: 3
+tags: []
+user_id: aryagupta

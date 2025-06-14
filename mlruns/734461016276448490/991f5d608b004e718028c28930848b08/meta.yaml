@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/991f5d608b004e718028c28930848b08/artifacts
+end_time: 1749623739493
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 991f5d608b004e718028c28930848b08
+run_name: unruly-whale-525
+run_uuid: 991f5d608b004e718028c28930848b08
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623662699
+status: 3
+tags: []
+user_id: aryagupta

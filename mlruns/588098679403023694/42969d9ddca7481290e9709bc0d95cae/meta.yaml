@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/42969d9ddca7481290e9709bc0d95cae/artifacts
+end_time: 1749578707386
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 42969d9ddca7481290e9709bc0d95cae
+run_name: worried-colt-756
+run_uuid: 42969d9ddca7481290e9709bc0d95cae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578539259
+status: 3
+tags: []
+user_id: aryagupta

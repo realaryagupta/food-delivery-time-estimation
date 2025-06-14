@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/d5746a26f86a4163916200534160a9ab/artifacts
+end_time: 1749623662960
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: d5746a26f86a4163916200534160a9ab
+run_name: zealous-chimp-713
+run_uuid: d5746a26f86a4163916200534160a9ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653397
+status: 3
+tags: []
+user_id: aryagupta

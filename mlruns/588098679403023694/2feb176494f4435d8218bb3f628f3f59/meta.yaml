@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/2feb176494f4435d8218bb3f628f3f59/artifacts
+end_time: 1749578297936
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 2feb176494f4435d8218bb3f628f3f59
+run_name: dashing-shad-197
+run_uuid: 2feb176494f4435d8218bb3f628f3f59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578076137
+status: 3
+tags: []
+user_id: aryagupta

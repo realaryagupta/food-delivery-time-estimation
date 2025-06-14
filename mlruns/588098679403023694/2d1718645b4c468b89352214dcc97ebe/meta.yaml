@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/2d1718645b4c468b89352214dcc97ebe/artifacts
+end_time: 1749578707531
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 2d1718645b4c468b89352214dcc97ebe
+run_name: auspicious-foal-400
+run_uuid: 2d1718645b4c468b89352214dcc97ebe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578544247
+status: 3
+tags: []
+user_id: aryagupta

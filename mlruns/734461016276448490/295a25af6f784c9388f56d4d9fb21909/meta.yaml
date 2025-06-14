@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/295a25af6f784c9388f56d4d9fb21909/artifacts
+end_time: 1749623681363
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 295a25af6f784c9388f56d4d9fb21909
+run_name: secretive-goat-921
+run_uuid: 295a25af6f784c9388f56d4d9fb21909
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623669745
+status: 3
+tags: []
+user_id: aryagupta

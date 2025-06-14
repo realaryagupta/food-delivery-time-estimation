@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/9c0b1d9c2fb64dcfa29e24dfa0ff5311/artifacts
+end_time: 1749578289902
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 9c0b1d9c2fb64dcfa29e24dfa0ff5311
+run_name: funny-squirrel-712
+run_uuid: 9c0b1d9c2fb64dcfa29e24dfa0ff5311
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578076140
+status: 3
+tags: []
+user_id: aryagupta

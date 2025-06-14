@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/07aeacf2090f4a1b9d832d2be745921c/artifacts
+end_time: 1749578535202
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 07aeacf2090f4a1b9d832d2be745921c
+run_name: fortunate-hound-694
+run_uuid: 07aeacf2090f4a1b9d832d2be745921c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578279971
+status: 3
+tags: []
+user_id: aryagupta

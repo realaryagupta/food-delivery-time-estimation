@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/c111ff84b44e4e53befa68bedc8b7ad0/artifacts
+end_time: 1749623682589
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: c111ff84b44e4e53befa68bedc8b7ad0
+run_name: luxuriant-fox-582
+run_uuid: c111ff84b44e4e53befa68bedc8b7ad0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623661241
+status: 3
+tags: []
+user_id: aryagupta

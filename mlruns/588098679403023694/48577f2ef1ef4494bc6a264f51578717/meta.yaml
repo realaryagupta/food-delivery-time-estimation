@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/48577f2ef1ef4494bc6a264f51578717/artifacts
+end_time: 1749578287398
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 48577f2ef1ef4494bc6a264f51578717
+run_name: big-horse-573
+run_uuid: 48577f2ef1ef4494bc6a264f51578717
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578076138
+status: 3
+tags: []
+user_id: aryagupta

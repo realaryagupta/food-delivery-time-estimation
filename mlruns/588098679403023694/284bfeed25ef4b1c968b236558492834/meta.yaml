@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/284bfeed25ef4b1c968b236558492834/artifacts
+end_time: 1749578539224
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 284bfeed25ef4b1c968b236558492834
+run_name: marvelous-hen-386
+run_uuid: 284bfeed25ef4b1c968b236558492834
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578287515
+status: 3
+tags: []
+user_id: aryagupta

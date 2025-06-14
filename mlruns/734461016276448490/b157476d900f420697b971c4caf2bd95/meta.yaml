@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/b157476d900f420697b971c4caf2bd95/artifacts
+end_time: 1749623669385
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: b157476d900f420697b971c4caf2bd95
+run_name: placid-ray-469
+run_uuid: b157476d900f420697b971c4caf2bd95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653400
+status: 3
+tags: []
+user_id: aryagupta

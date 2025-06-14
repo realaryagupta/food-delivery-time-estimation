@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/a16940ed5de74507b98d771b8345ec6b/artifacts
+end_time: 1749623802361
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: a16940ed5de74507b98d771b8345ec6b
+run_name: puzzled-colt-86
+run_uuid: a16940ed5de74507b98d771b8345ec6b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623695764
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/c829224c89b24c48840714e1a78604f7/artifacts
+end_time: 1749623662629
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: c829224c89b24c48840714e1a78604f7
+run_name: skillful-shark-422
+run_uuid: c829224c89b24c48840714e1a78604f7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653398
+status: 3
+tags: []
+user_id: aryagupta

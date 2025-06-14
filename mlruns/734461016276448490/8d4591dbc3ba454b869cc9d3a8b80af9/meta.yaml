@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/8d4591dbc3ba454b869cc9d3a8b80af9/artifacts
+end_time: 1749623778727
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 8d4591dbc3ba454b869cc9d3a8b80af9
+run_name: rebellious-skink-955
+run_uuid: 8d4591dbc3ba454b869cc9d3a8b80af9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653394
+status: 3
+tags: []
+user_id: aryagupta

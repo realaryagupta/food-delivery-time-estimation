@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/334c2ea8274444be97b041a82395bfad/artifacts
+end_time: 1749623733737
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 334c2ea8274444be97b041a82395bfad
+run_name: honorable-mouse-373
+run_uuid: 334c2ea8274444be97b041a82395bfad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623682627
+status: 3
+tags: []
+user_id: aryagupta

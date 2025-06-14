@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/7f9caccf986f45e69a5da73123fafbca/artifacts
+end_time: 1749578279901
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 7f9caccf986f45e69a5da73123fafbca
+run_name: righteous-tern-181
+run_uuid: 7f9caccf986f45e69a5da73123fafbca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578076137
+status: 3
+tags: []
+user_id: aryagupta

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/588098679403023694/5726fd5239d1464bbcb19a3555ba6dd1/artifacts
+end_time: 1749578706354
+entry_point_name: ''
+experiment_id: '588098679403023694'
+lifecycle_stage: active
+run_id: 5726fd5239d1464bbcb19a3555ba6dd1
+run_name: able-rook-168
+run_uuid: 5726fd5239d1464bbcb19a3555ba6dd1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749578535271
+status: 3
+tags: []
+user_id: aryagupta

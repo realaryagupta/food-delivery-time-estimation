@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/734461016276448490/7fc39aaf0c6d4efd826327720460b4c1/artifacts
+end_time: 1749623678663
+entry_point_name: ''
+experiment_id: '734461016276448490'
+lifecycle_stage: active
+run_id: 7fc39aaf0c6d4efd826327720460b4c1
+run_name: powerful-bird-769
+run_uuid: 7fc39aaf0c6d4efd826327720460b4c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749623653397
+status: 3
+tags: []
+user_id: aryagupta

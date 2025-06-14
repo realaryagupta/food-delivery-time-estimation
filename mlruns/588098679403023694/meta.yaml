@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/588098679403023694
+creation_time: 1749577543305
+experiment_id: '588098679403023694'
+last_update_time: 1749577543305
+lifecycle_stage: active
+name: Exp 4.6 - Stacking Regressor

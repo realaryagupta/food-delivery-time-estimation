@@ -105,6 +105,7 @@ def clean_data_types(data: pd.DataFrame) -> pd.DataFrame:
     
     # Festival
     data['is_festival'] = data['is_festival'].str.lower().str.strip()
+    data['is_festival'] = data['is_festival'].replace({'yes': 1, 'no': 0})
     
     # City category
     data['city_category'] = data['city_category'].str.lower().str.strip()

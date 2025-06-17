@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Comprehensive Data Cleaning Script for Food Delivery Dataset
-Author: Data Science Team
-Date: 2025-06-14
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

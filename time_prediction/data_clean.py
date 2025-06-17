@@ -303,7 +303,7 @@ def main(input_path: str, output_path: str = None) -> pd.DataFrame:
 if __name__ == "__main__":
     base_dir = Path(__file__).parent 
     INPUT_FILE = base_dir.parent / "data/raw/train.csv"
-    OUTPUT_FILE = base_dir.parent / "data/interim/clean_train.csv"
+    OUTPUT_FILE = base_dir.parent / "data/interim/clean_train_final_version.csv"
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 

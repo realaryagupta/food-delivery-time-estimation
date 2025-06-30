@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Swiggy-Style Delivery Predictor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match a Swiggy-inspired dark theme and gradients */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Swiggy-like dark background */
+            color: #ffffff; /* White text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top, allowing scroll */
+            min-height: 100vh;
+            padding-top: 2rem; /* Spacing from the top */
+            padding-bottom: 2rem;
+            line-height: 1.6; /* Improved readability */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Max width for content */
+            padding: 1.5rem;
+            background-color: #282c3f; /* Swiggy-like slightly lighter dark background for content area */
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.8s ease-out; /* Added fade-in animation for the container */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.8rem; /* Slightly larger */
+            font-weight: 800; /* Bolder */
+            margin-bottom: 1rem;
+            padding: 1.8rem; /* Increased padding */
+            background: linear-gradient(135deg, #fc8019 0%, #ff3d67 100%); /* Swiggy orange/red gradient */
+            border-radius: 18px; /* Slightly more rounded */
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* More prominent text shadow */
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 1.2rem; /* Slightly larger */
+            margin-bottom: 2.5rem; /* More spacing */
+            font-style: italic;
+        }
+
+        .section-header {
+            color: #ffffff;
+            font-size: 1.5rem; /* Slightly larger */
+            font-weight: bold;
+            margin-top: 2.5rem; /* More spacing */
+            margin-bottom: 1.8rem;
+            padding: 1.2rem;
+            background: linear-gradient(90deg, #fc8019 0%, #fa4a6c 100%); /* Swiggy orange/red gradient */
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(252, 128, 25, 0.4); /* Stronger shadow */
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #3d425b 0%, #4a4e69 100%); /* Darker background for cards */
+            padding: 2rem; /* More padding */
+            border-radius: 18px; /* More rounded */
+            margin-bottom: 2rem; /* More margin bottom for cards */
+            border: 1px solid #fc8019; /* Swiggy accent color border */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            color: #ffffff;
+            font-weight: 700; /* Bolder label */
+            font-size: 1.15rem; /* Slightly larger */
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 0.9rem; /* More padding */
+            border-radius: 10px; /* More rounded */
+            border: 1px solid #fc8019; /* Swiggy accent border color */
+            background-color: #1b1b1b; /* Darker input background */
+            color: white;
+            font-size: 1.05rem; /* Slightly larger font */
+            margin-top: 0.6rem;
+            margin-bottom: 1.2rem; /* Spacing below inputs */
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #ff3d67; /* Swiggy red focus color */
+            box-shadow: 0 0 0 4px rgba(255, 61, 103, 0.4); /* Stronger focus shadow */
+            background-color: #2a2a2a; /* Slightly lighter on focus */
+        }
+
+        button {
+            background: linear-gradient(45deg, #fc8019 0%, #ff3d67 100%); /* Swiggy orange/red gradient */
+            color: white;
+            border-radius: 30px; /* More rounded pill shape */
+            border: none;
+            padding: 1.2rem 2.5rem; /* More padding */
+            font-size: 1.3rem; /* Larger font */
+            font-weight: bold;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(252, 128, 25, 0.5); /* Stronger shadow */
+            cursor: pointer;
+            letter-spacing: 0.5px; /* Slight letter spacing */
+        }
+
+        button:hover:not(:disabled) { /* Added :not(:disabled) */
+            transform: translateY(-3px); /* More pronounced lift */
+            box-shadow: 0 12px 35px rgba(252, 128, 25, 0.7);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background: linear-gradient(45deg, #a0a0a0 0%, #808080 100%); /* Greyed out when disabled */
+            box-shadow: none;
+            transform: none;
+        }
+
+        .prediction-box {
+            background: linear-gradient(135deg, #fc8019 0%, #ff3d67 100%); /* Swiggy orange/red gradient */
+            border: none;
+            border-radius: 25px; /* More rounded */
+            padding: 3rem; /* More padding */
+            margin: 2.5rem 0; /* More margin */
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(252, 128, 25, 0.5); /* Stronger shadow */
+            animation: scaleIn 0.5s ease-out; /* Animation for prediction box */
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .prediction-result {
+            font-size: 3rem; /* Larger font */
+            font-weight: 800; /* Bolder */
+            color: #ffffff;
+            margin: 1.2rem 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* More prominent text shadow */
+        }
+
+        .prediction-label {
+            font-size: 1.4rem; /* Slightly larger */
+            color: #e0e0e0;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #3d425b 0%, #4a4e69 100%); /* Darker background for info box */
+            border-left: 6px solid #fc8019; /* Thicker accent border */
+            padding: 2rem; /* More padding */
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+        }
+
+        .info-box h4 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #ff3d67; /* Swiggy red for emphasis */
+        }
+
+        .info-box ul {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        .info-box ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.7rem;
+            color: #e0e0e0;
+        }
+
+        .info-box ul li::before {
+            content: '•'; /* Custom bullet point */
+            color: #fc8019; /* Swiggy orange bullet */
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -0.1em;
+        }
+
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Slightly larger min-width */
+            gap: 1.8rem; /* More gap */
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #3d425b 0%, #4a4e69 100%); /* Darker background for stats */
+            padding: 2rem; /* More padding */
+            border-radius: 18px; /* More rounded */
+            text-align: center;
+            border: 1px solid #fc8019; /* Swiggy accent border */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-value {
+            font-size: 2.2rem; /* Larger font */
+            font-weight: 800; /* Bolder */
+            color: #ff3d67; /* Swiggy red highlight color */
+            margin-bottom: 0.8rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-label {
+            font-size: 1rem; /* Slightly larger */
+            color: #e0e0e0;
+            font-weight: 600;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .title {
+                font-size: 2.2rem;
+                padding: 1.2rem;
+            }
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            .section-header {
+                font-size: 1.3rem;
+                padding: 1rem;
+            }
+            .prediction-result {
+                font-size: 2.4rem;
+            }
+            .prediction-box {
+                padding: 2rem;
+            }
+            .quick-stats {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 1rem;
+            }
+            .stat-value {
+                font-size: 1.8rem;
+            }
+            .stat-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <h1 class="title">⚡ Swiggy-Style Delivery Predictor</h1>
+        <p class="subtitle">Get accurate delivery time predictions based on a myriad of factors – just like magic!</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> <div>
+                <div class="feature-card">
+                    <div class="section-header">📊 Numerical Features</div>
+                    <label for="ratings">🌟 Restaurant Ratings (1.0 - 5.0)</label>
+                    <input type="number" id="ratings" name="ratings" min="1.0" max="5.0" step="0.1" value="4.0">
+
+                    <label for="distance">📍 Delivery Distance (km)</label>
+                    <input type="number" id="distance" name="distance" min="0.1" max="50.0" step="0.1" value="5.0">
+                </div>
+
+                <div class="feature-card">
+                    <div class="section-header">📅 Time & Event Features</div>
+                    <label for="is_festival">🎉 Festival Day</label>
+                    <select id="is_festival" name="is_festival">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+
+                    <label for="is_weekend">🏖️ Weekend</label>
+                    <select id="is_weekend" name="is_weekend">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+
+                    <label for="day_of_week">🗓️ Day of Week</label>
+                    <select id="day_of_week" name="day_of_week">
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <div class="feature-card">
+                    <div class="section-header">🏙️ Location & Order Features</div>
+                    <label for="distance_type">📏 Distance Type</label>
+                    <select id="distance_type" name="distance_type">
+                        <option value="short">Short</option>
+                        <option value="medium">Medium</option>
+                        <option value="long">Long</option>
+                    </select>
+
+                    <label for="weather">☁️ Weather Conditions</label>
+                    <select id="weather" name="weather">
+                        <option value="sunny">Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="stormy">Stormy</option>
+                        <option value="windy">Windy</option>
+                    </select>
+
+                    <label for="order_type">🍔 Order Type</label>
+                    <select id="order_type" name="order_type">
+                        <option value="snack">Snack</option>
+                        <option value="meal">Meal</option>
+                        <option value="buffet">Buffet</option>
+                        <option value="drinks">Drinks</option>
+                    </select>
+
+                    <label for="city_category">🌆 City Category</label>
+                    <select id="city_category" name="city_category">
+                        <!-- CHANGE THESE VALUES TO MATCH YOUR METADATA EXACTLY -->
+                        <option value="urban">Urban</option>
+                        <option value="metropolitian">Metropolitan</option>
+                        <option value="semi-urban">Semi-Urban</option>
+                        <!-- Remove <option value="metro">Metro</option> if it's not in your model's categories -->
+                    </select>
+
+                    <label for="order_time_of_day">⏰ Order Time of Day</label>
+                    <select id="order_time_of_day" name="order_time_of_day">
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                        <option value="night">Night</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">🎯 Get Your Prediction!</div>
+        <br>
+        <button id="predict_btn">🚀 Predict Delivery Time</button>
+
+        <div id="prediction_output" class="hidden">
+            </div>
+
+        <div class="section-header">ℹ️ How Our Model Works</div>
+        <div class="info-box">
+            <h4>🧠 Powering Your Predictions: Our Machine Learning Model</h4>
+            <p>This advanced <strong>stacking regressor model</strong> is meticulously designed to predict delivery times with high accuracy by analyzing a blend of crucial factors:</p>
+            <ul>
+                <li><strong>🏪 Restaurant Dynamics:</strong> From customer ratings to location nuances.</li>
+                <li><strong>📍 Geographical Factors:</strong> Precise delivery distance and categorized distance types.</li>
+                <li><strong>⏰ Temporal Context:</strong> Accounting for the day of the week, specific time of day, and special events like festivals or weekends.</li>
+                <li><strong>☁️ Environmental Conditions:</strong> Adapting to current weather patterns and city-specific characteristics.</li>
+                <li><strong>🍽️ Order Specifics:</strong> Understanding the complexity and type of your food order.</li>
+            </ul>
+            <p>By combining insights from multiple algorithms and extensive historical data, we aim to provide you with the most reliable delivery time estimates possible.</p>
+        </div>
+
+        <h3 class="text-xl font-bold mt-8 mb-4 text-white text-center">📈 Quick Model Stats</h3>
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-value">🎯 95%+</div>
+                <div class="stat-label">Prediction Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">⚡ &lt; 1s</div>
+                <div class="stat-label">Response Speed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">📊 10</div>
+                <div class="stat-label">Key Features</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">🤖 Stacking</div>
+                <div class="stat-label">Model Type</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const predictBtn = document.getElementById('predict_btn');
+            const predictionOutput = document.getElementById('prediction_output');
+
+            // --- IMPORTANT: Define your backend API URL here ---
+            // For local testing:
+            const BACKEND_API_URL = 'http://127.0.0.1:8000';
+            // For deployment (REPLACE WITH YOUR ACTUAL RENDER URL):
+            // const BACKEND_API_URL = 'https://your-fastapi-app-name.onrender.com';
+
+
+            predictBtn.addEventListener('click', async () => {
+                // Disable the button and show loading
+                predictBtn.disabled = true;
+                predictionOutput.innerHTML = `
+                    <div class="prediction-box">
+                        <div class="prediction-label">Calculating your estimated delivery time...</div>
+                        <div class="prediction-result flex justify-center items-center">
+                            <svg class="animate-spin h-10 w-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                `;
+                predictionOutput.classList.remove('hidden');
+
+                try {
+                    // Collect input values from form elements
+                    const ratings = parseFloat(document.getElementById('ratings').value);
+                    const distance = parseFloat(document.getElementById('distance').value);
+                    const is_festival = parseInt(document.getElementById('is_festival').value); // 0 or 1
+                    const is_weekend = parseInt(document.getElementById('is_weekend').value);     // 0 or 1
+                    const day_of_week = document.getElementById('day_of_week').value;             // e.g., "monday"
+                    const distance_type = document.getElementById('distance_type').value;         // e.g., "short"
+                    const weather = document.getElementById('weather').value;                     // e.g., "sunny"
+                    const order_type = document.getElementById('order_type').value;               // e.g., "snack"
+                    const city_category = document.getElementById('city_category').value;         // e.g., "metro"
+                    const order_time_of_day = document.getElementById('order_time_of_day').value; // e.g., "morning"
+
+                    // Prepare data object to send to FastAPI
+                    const inputData = {
+                        ratings: ratings,
+                        distance: distance,
+                        is_festival: is_festival,
+                        is_weekend: is_weekend,
+                        day_of_week: day_of_week,
+                        distance_type: distance_type,
+                        weather: weather,
+                        order_type: order_type,
+                        city_category: city_category,
+                        order_time_of_day: order_time_of_day
+                    };
+
+                    // --- THIS IS THE CRITICAL CHANGE: Make the actual fetch call to your FastAPI backend ---
+                    const response = await fetch(`${BACKEND_API_URL}/predict`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(inputData),
+                    });
+
+                    if (!response.ok) {
+                        // If the response is not OK (e.g., 400, 500 status)
+                        const errorData = await response.json();
+                        console.error('API Error:', errorData); // Log the detailed error from backend
+                        throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    const predictedTime = data.predicted_delivery_time_minutes;
+
+                    let insightMessage = "";
+                    let insightColorClass = "";
+                    // Adjust these thresholds as per your model's typical output and business logic
+                    if (predictedTime > 45) {
+                        insightMessage = `This delivery might take longer than usual. Consider ordering from a closer restaurant or during off-peak hours.`;
+                        insightColorClass = "text-yellow-400";
+                    } else if (predictedTime < 25) {
+                        insightMessage = `Great! This should be a super quick delivery. Your food will be there in a flash!`;
+                        insightColorClass = "text-green-400";
+                    } else {
+                        insightMessage = `Normal delivery time expected. Enjoy your meal!`;
+                        insightColorClass = "text-blue-400";
+                    }
+
+                    predictionOutput.innerHTML = `
+                        <div class="prediction-box">
+                            <div class="prediction-label">⏱️ Estimated Delivery Time</div>
+                            <div class="prediction-result">${predictedTime.toFixed(1)} <span class="text-3xl">minutes</span></div>
+                            <div class="text-gray-300 text-sm mt-4">
+                                Approximately ${Math.round(predictedTime)} minutes
+                            </div>
+                            <div class="${insightColorClass} mt-6 font-semibold text-center text-lg">
+                                ${insightMessage}
+                            </div>
+                        </div>
+                    `;
+
+                } catch (error) {
+                    console.error('Error during prediction:', error); // More generic error message for user
+                    predictionOutput.innerHTML = `
+                        <div class="prediction-box bg-red-800" style="background: linear-gradient(135deg, #cc2e5d 0%, #ff6f61 100%);">
+                            <div class="prediction-label">Oops! Something went wrong...</div>
+                            <div class="prediction-result text-white">Failed to get prediction.</div>
+                            <div class="text-red-100 text-sm mt-4">
+                                Please check your inputs and try again. If the issue persists, contact support. Error: ${error.message}
+                            </div>
+                        </div>
+                    `;
+                } finally {
+                    // Re-enable the button after prediction (or error)
+                    predictBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

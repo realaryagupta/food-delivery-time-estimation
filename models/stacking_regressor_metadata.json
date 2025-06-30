@@ -1,0 +1,92 @@
+{
+    "feature_categories": {
+        "numerical": [
+            "ratings",
+            "distance"
+        ],
+        "nominal": [
+            "is_festival",
+            "is_weekend",
+            "day_of_week"
+        ],
+        "ordinal": [
+            "distance_type",
+            "weather",
+            "order_type",
+            "city_category",
+            "order_time_of_day"
+        ],
+        "target": "time"
+    },
+    "ordinal_mappings": {
+        "distance_type": [
+            "short",
+            "medium",
+            "long",
+            "very_long"
+        ],
+        "weather": [
+            "sunny",
+            "cloudy",
+            "windy",
+            "fog",
+            "stormy",
+            "sandstorms"
+        ],
+        "order_type": [
+            "snack",
+            "drinks",
+            "buffet",
+            "meal"
+        ],
+        "city_category": [
+            "urban",
+            "metropolitian",
+            "semi-urban"
+        ],
+        "order_time_of_day": [
+            "morning",
+            "afternoon",
+            "evening",
+            "night"
+        ]
+    },
+    "feature_importances": {
+        "feature": {
+            "1": "distance",
+            "0": "ratings",
+            "12": "weather",
+            "2": "is_festival_1.0",
+            "15": "order_time_of_day",
+            "13": "order_type",
+            "14": "city_category",
+            "10": "day_of_week_Wednesday",
+            "5": "day_of_week_Monday",
+            "4": "day_of_week_Friday",
+            "8": "day_of_week_Thursday",
+            "9": "day_of_week_Tuesday",
+            "11": "distance_type",
+            "6": "day_of_week_Saturday",
+            "3": "is_weekend_1",
+            "7": "day_of_week_Sunday"
+        },
+        "importance": {
+            "1": 0.3128989068846931,
+            "0": 0.2552243467481635,
+            "12": 0.16206057912993072,
+            "2": 0.06120645213237305,
+            "15": 0.047398590122901874,
+            "13": 0.044782077285131346,
+            "14": 0.022569333509274692,
+            "10": 0.011567331975666508,
+            "5": 0.011509281256129975,
+            "4": 0.011479290179363517,
+            "8": 0.011399827349441451,
+            "9": 0.011331986764518328,
+            "11": 0.01130004020864247,
+            "6": 0.008570887778401792,
+            "3": 0.008435122790762323,
+            "7": 0.008265945884605237
+        }
+    }
+}

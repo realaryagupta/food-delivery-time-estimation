@@ -6,6 +6,7 @@
     <title>OnTime Eats - Smart Delivery Time Predictions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -139,14 +140,56 @@
             margin-bottom: 16px;
             display: inline-block;
         }
+        /* Style for chart containers */
+        .chart-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 20px;
+            min-height: 400px; /* Ensure some height for loading animation */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #4a5568;
+            font-size: 1.125rem;
+            font-weight: 500;
+            /* Ensure charts take full width on small screens and half on larger */
+            width: 100%;
+        }
+        /* Specific styling for error/loading states */
+        .chart-loading {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 20px;
+            min-height: 400px; /* Ensure some height for loading animation */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #4a5568;
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+        .chart-container.bg-red-50 { /* Style for error state */
+            background-color: #fef2f2; /* red-50 */
+            border-color: #fecaca; /* red-200 */
+            color: #ef4444; /* red-500 */
+        }
+        .chart-container.bg-yellow-50 { /* Style for warning/missing data state */
+            background-color: #fffbeb; /* yellow-50 */
+            border-color: #fde68a; /* yellow-200 */
+            color: #d97706; /* yellow-700 */
+        }
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
     <header class="header-gradient shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-r from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -156,21 +199,14 @@
                     <h1 class="text-2xl font-bold brand-gradient">OnTime Eats</h1>
                 </div>
 
-                <!-- Navigation -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#" class="nav-link">Home</a>
                     <a href="#predictor" class="nav-link">Time Predictor</a>
-                    <a href="#" class="nav-link">Restaurants</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#analysis" class="nav-link">Analysis</a> <a href="https://aryagupta.vercel.app/" class="nav-link">About</a>
+                    <a href="https://www.linkedin.com/in/arya-gupta-ag/" class="nav-link">Contact</a>
                 </nav>
 
-                <!-- CTA Button -->
-                <button class="hidden md:block bg-gradient-to-r from-amber-400 to-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-                    Order Now
-                </button>
 
-                <!-- Mobile Menu Button -->
                 <button class="md:hidden text-gray-300 hover:text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -180,7 +216,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -188,11 +223,11 @@
                 Before You Order
             </h2>
             <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Our AI-powered delivery time predictor analyzes real-time data to give you accurate delivery estimates, 
+                Our AI-powered delivery time predictor analyzes real-time data to give you accurate delivery estimates,
                 helping you plan your meals perfectly.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="document.getElementById('predictor').scrollIntoView({behavior: 'smooth'})" 
+                <button onclick="document.getElementById('predictor').scrollIntoView({behavior: 'smooth'})"
                         class="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300">
                     Try Predictor Now
                 </button>
@@ -203,13 +238,12 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="text-center">
                     <div class="text-3xl font-bold text-amber-500 mb-2">50K+</div>
-                    <div class="text-gray-600">Daily Orders</div>
+                    <div class="text-gray-600">Orders Record</div>
                 </div>
                 <div class="text-center">
                     <div class="text-3xl font-bold text-amber-500 mb-2">25min</div>
@@ -220,17 +254,15 @@
                     <div class="text-gray-600">Accuracy Rate</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-amber-500 mb-2">500+</div>
-                    <div class="text-gray-600">Partner Restaurants</div>
+                    <div class="text-3xl font-bold text-amber-500 mb-2">22+</div>
+                    <div class="text-gray-600">Cities</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Predictor Section -->
     <section id="predictor" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
             <div class="text-center mb-16">
                 <span class="section-badge">AI-Powered Prediction</span>
                 <h3 class="text-3xl font-bold text-gray-900 mb-4">Smart Delivery Time Predictor</h3>
@@ -240,10 +272,8 @@
                 </p>
             </div>
 
-            <!-- Predictor Form -->
             <div class="card p-8 max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Restaurant & Location -->
                     <div class="space-y-6">
                         <div>
                             <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -281,7 +311,6 @@
                         </div>
                     </div>
 
-                    <!-- Order & Timing -->
                     <div class="space-y-6">
                         <div>
                             <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -325,7 +354,6 @@
                         </div>
                     </div>
 
-                    <!-- Conditions -->
                     <div class="space-y-6">
                         <div>
                             <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -364,7 +392,6 @@
                     </div>
                 </div>
 
-                <!-- Predict Button -->
                 <div class="mt-8 text-center">
                     <button id="predict_btn" class="predict-btn max-w-md">
                         <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -374,11 +401,9 @@
                     </button>
                 </div>
 
-                <!-- Results -->
                 <div id="prediction_output" class="hidden"></div>
             </div>
 
-            <!-- Model Performance Stats -->
             <div class="mt-16">
                 <div class="text-center mb-8">
                     <h4 class="text-2xl font-bold text-gray-900 mb-2">Model Performance</h4>
@@ -390,7 +415,7 @@
                         <div class="text-sm text-gray-600 font-medium">Prediction Accuracy</div>
                     </div>
                     <div class="stat-card">
-                        <div class="text-2xl font-bold text-blue-500 mb-2">&lt;800ms</div>
+                        <div class="text-2xl font-bold text-blue-500 mb-2">&lt;10s</div>
                         <div class="text-sm text-gray-600 font-medium">Response Time</div>
                     </div>
                     <div class="stat-card">
@@ -406,14 +431,34 @@
         </div>
     </section>
 
-    <!-- How It Works -->
+    <section id="analysis" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="section-badge">Data Insights</span>
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">In-depth Data Analysis</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Explore the underlying data patterns and relationships that drive our predictions.
+                </p>
+                <button id="load_charts_btn" class="predict-btn max-w-xs mt-6">Load Data Charts</button>
+            </div>
+
+            <div id="charts_container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Charts will be dynamically loaded here -->
+            </div>
+            <div id="charts_error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-8" role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block sm:inline" id="charts_error_message"></span>
+            </div>
+        </div>
+    </section>
+
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="section-badge">Technology</span>
                 <h3 class="text-3xl font-bold text-gray-900 mb-4">How Our AI Prediction Works</h3>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Our advanced machine learning model analyzes multiple data points in real-time to provide 
+                    Our advanced machine learning model analyzes multiple data points in real-time to provide
                     you with the most accurate delivery time estimates.
                 </p>
             </div>
@@ -451,7 +496,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -480,7 +524,7 @@
                 <div>
                     <h4 class="font-semibold mb-4">Company</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-amber-400">About Us</a></li>
+                        <li><a href="https://aryagupta.vercel.app/" class="hover:text-amber-400">About Us</a></li>
                         <li><a href="#" class="hover:text-amber-400">Careers</a></li>
                         <li><a href="#" class="hover:text-amber-400">Press</a></li>
                         <li><a href="#" class="hover:text-amber-400">Blog</a></li>
@@ -497,7 +541,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-                <p>&copy; 2024 OnTime Eats. All rights reserved. | Powered by Advanced Machine Learning</p>
+                <p>&copy; 2025 OnTime Eats. All rights reserved. | Powered by Advanced Machine Learning</p>
             </div>
         </div>
     </footer>
@@ -506,8 +550,12 @@
         document.addEventListener('DOMContentLoaded', () => {
             const predictBtn = document.getElementById('predict_btn');
             const predictionOutput = document.getElementById('prediction_output');
+            const loadChartsBtn = document.getElementById('load_charts_btn');
+            const chartsContainer = document.getElementById('charts_container');
+            const chartsErrorDiv = document.getElementById('charts_error');
+            const chartsErrorMessage = document.getElementById('charts_error_message');
 
-            const BACKEND_API_URL = 'https://food-delivery-time-estimation-qnri.onrender.com';
+            const BACKEND_API_URL = 'https://food-delivery-time-estimation-qnri.onrender.com'; // Ensure this matches your FastAPI server URL
 
             predictBtn.addEventListener('click', async () => {
                 predictBtn.disabled = true;
@@ -558,7 +606,7 @@
                     let insightMessage = "";
                     let insightIcon = "";
                     let insightClass = "";
-                    
+
                     if (predictedTime > 45) {
                         insightMessage = "This might take longer than usual. Consider ordering from closer restaurants during peak hours.";
                         insightIcon = "⚠️";
@@ -614,6 +662,151 @@
                     predictBtn.disabled = false;
                 }
             });
+
+            // Function to load and display charts
+            async function loadCharts() {
+                loadChartsBtn.disabled = true;
+                chartsContainer.innerHTML = ''; // Clear existing content
+                chartsErrorDiv.classList.add('hidden'); // Hide any previous errors
+
+                // Add initial loading indicators for all potential chart groups
+                chartsContainer.innerHTML = `
+                    <div id="loading-time-dist" class="chart-loading col-span-full">
+                        <svg class="animate-spin h-8 w-8 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading Delivery Time Distribution Charts...
+                    </div>
+                    <div id="loading-time-day" class="chart-loading col-span-full">
+                        <svg class="animate-spin h-8 w-8 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading Delivery Time by Day of Week Charts...
+                    </div>
+                    <div id="loading-traffic" class="chart-loading col-span-full">
+                        <svg class="animate-spin h-8 w-8 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading Traffic Conditions Chart...
+                    </div>
+                    <div id="loading-multivariate" class="chart-loading col-span-full">
+                        <svg class="animate-spin h-8 w-8 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading Multivariate Analysis Charts...
+                    </div>
+                    <div id="loading-probplot" class="chart-loading col-span-full">
+                        <svg class="animate-spin h-8 w-8 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading Probability Plot...
+                    </div>
+                `;
+
+                try {
+                    const response = await fetch(`${BACKEND_API_URL}/analysis/charts`);
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+                    }
+                    const chartsData = await response.json();
+
+                    // Helper function to render a single chart
+                    function renderChart(chartJson, containerId, title) {
+                        try {
+                            const chartData = JSON.parse(chartJson);
+                            const chartDiv = document.createElement('div');
+                            chartDiv.id = containerId;
+                            chartDiv.className = 'chart-container w-full h-96'; // Tailwind classes for sizing
+                            chartsContainer.appendChild(chartDiv);
+                            Plotly.newPlot(containerId, chartData.data, chartData.layout);
+                        } catch (error) {
+                            console.error(`Error rendering chart ${containerId}:`, error);
+                            const errorDiv = document.createElement('div');
+                            errorDiv.className = 'chart-container bg-red-50 border-red-200 text-red-500';
+                            errorDiv.innerHTML = `❌ Error loading ${title}.`;
+                            chartsContainer.appendChild(errorDiv);
+                        }
+                    }
+
+                    // Remove initial loading indicators before rendering actual charts
+                    document.getElementById('loading-time-dist')?.remove();
+                    document.getElementById('loading-time-day')?.remove();
+                    document.getElementById('loading-traffic')?.remove();
+                    document.getElementById('loading-multivariate')?.remove();
+                    document.getElementById('loading-probplot')?.remove();
+
+
+                    // Render each chart group
+                    if (chartsData.time_distribution_plots && Array.isArray(chartsData.time_distribution_plots)) {
+                        // Only render the Histogram with KDE (which is the third plot in the backend's array, index 2)
+                        if (chartsData.time_distribution_plots.length > 2 && chartsData.time_distribution_plots[2]) {
+                            renderChart(chartsData.time_distribution_plots[2], `chart-time-dist-hist-kde`, `Delivery Time Histogram with KDE`);
+                        } else {
+                            console.warn("Histogram with KDE data for time distribution missing or not at expected index.");
+                            chartsContainer.innerHTML += `<div class="chart-container bg-yellow-50 border-yellow-200 text-yellow-700">⚠️ Delivery Time Histogram with KDE data not available.</div>`;
+                        }
+                    } else {
+                        console.warn("time_distribution_plots data missing or not an array.");
+                        chartsContainer.innerHTML += `<div class="chart-container bg-yellow-50 border-yellow-200 text-yellow-700">⚠️ Delivery Time Distribution Charts data not available.</div>`;
+                    }
+
+                    if (chartsData.time_by_day_of_week_plots && Array.isArray(chartsData.time_by_day_of_week_plots)) {
+                        chartsData.time_by_day_of_week_plots.forEach((chartJson, index) => {
+                            // You can choose which specific plots to render here if you only want a subset
+                            // For now, rendering all as per previous logic, but you can filter by index if needed
+                            renderChart(chartJson, `chart-time-day-${index}`, `Time by Day of Week Plot ${index + 1}`);
+                        });
+                    } else {
+                        console.warn("time_by_day_of_week_plots data missing or not an array.");
+                        chartsContainer.innerHTML += `<div class="chart-container bg-yellow-50 border-yellow-200 text-yellow-700">⚠️ Time by Day of Week Charts data not available.</div>`;
+                    }
+
+                    if (chartsData.traffic_conditions_chart) {
+                        renderChart(chartsData.traffic_conditions_chart, 'chart-traffic', 'Traffic Conditions Chart');
+                    } else {
+                        console.warn("traffic_conditions_chart data missing.");
+                        chartsContainer.innerHTML += `<div class="chart-container bg-yellow-50 border-yellow-200 text-yellow-700">⚠️ Traffic Conditions Chart data not available.</div>`;
+                    }
+
+                    if (chartsData.multivariate_day_order_type_plots && Array.isArray(chartsData.multivariate_day_order_type_plots)) {
+                        chartsData.multivariate_day_order_type_plots.forEach((chartJson, index) => {
+                            renderChart(chartJson, `chart-multivariate-${index}`, `Multivariate Analysis Plot ${index + 1}`);
+                        });
+                    } else {
+                        console.warn("multivariate_day_order_type_plots data missing or not an array.");
+                        chartsContainer.innerHTML += `<div class="chart-container bg-yellow-50 border-yellow-200 text-yellow-700">⚠️ Multivariate Analysis Charts data not available.</div>`;
+                    }
+
+                    // Removed the time_probplot section as requested
+                    // if (chartsData.time_probplot) {
+                    //     renderChart(chartsData.time_probplot, 'chart-probplot', 'Probability Plot');
+                    // } else {
+                    //     console.warn("time_probplot data missing.");
+                    //     chartsContainer.innerHTML += `<div class="chart-container bg-yellow-50 border-yellow-200 text-yellow-700">⚠️ Probability Plot data not available.</div>`;
+                    // }
+
+                } catch (error) {
+                    console.error('Error loading charts:', error);
+                    chartsErrorDiv.classList.remove('hidden');
+                    chartsErrorMessage.textContent = `Could not load charts: ${error.message}`;
+
+                    // Clear all loading indicators and show a global error if the fetch itself fails
+                    chartsContainer.innerHTML = '';
+                    chartsContainer.innerHTML = `<div class="chart-container bg-red-50 border-red-200 text-red-500 col-span-full">❌ Global Error loading charts: ${error.message}</div>`;
+
+                } finally {
+                    loadChartsBtn.disabled = false;
+                }
+            }
+
+            // Event listener for the "Load Data Charts" button
+            loadChartsBtn.addEventListener('click', loadCharts);
         });
     </script>
 </body>

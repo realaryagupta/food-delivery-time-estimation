@@ -1,17 +1,32 @@
+# main.py
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 import joblib
 import json
 import os
+import sys
 import pandas as pd
-from typing import Literal, Dict, Any
+from typing import Literal, Dict, Any, List
 import traceback
+
+# --- Path Configuration ---
+current_dir = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(current_dir, ".."))
+NOTEBOOKS_DIR = os.path.join(PROJECT_ROOT, 'notebooks')
+sys.path.insert(0, NOTEBOOKS_DIR)
+
+# Define paths for model, metadata, and data relative to the project root
+MODEL_PATH = os.path.join(PROJECT_ROOT, "models", "stacking_regressor_model.joblib")
+METADATA_PATH = os.path.join(PROJECT_ROOT, "models", "stacking_regressor_metadata.json")
+DATA_PATH = os.path.join(PROJECT_ROOT, "data", "interim", "clean_train.csv")
+
 
 # Initialize FastAPI app
 app = FastAPI(
     title="Food Delivery Time Prediction API",
-    description="Predicts food delivery time based on various factors using a Stacking Regressor model."
+    description="Predicts food delivery time based on various factors using a Stacking Regressor model and provides data analysis charts."
 )
 
 # Configure CORS to allow communication from your frontend
@@ -23,23 +38,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Load Model and Metadata ---
-# IMPORTANT: Adjusting paths for the new folder structure.
-# os.path.dirname(__file__) gives the directory of main.py (e.g., /path/to/backend)
-# os.path.join(..., "..") moves up to the parent directory (e.g., /path/to/food_time_prediction_using_mlops)
-# Then, we join 'models' to that root.
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-MODEL_PATH = os.path.join(ROOT_DIR, "models", "stacking_regressor_model.joblib")
-METADATA_PATH = os.path.join(ROOT_DIR, "models", "stacking_regressor_metadata.json")
 
-# --- Debugging prints for model/metadata loading paths ---
-print(f"Attempting to load model from: {MODEL_PATH}")
-print(f"Attempting to load metadata from: {METADATA_PATH}")
-# --- End Debugging prints ---
-
-
+# --- Load Model, Metadata, and Data for Analysis ---
 model = None
 metadata = None
+data = None # To store your DataFrame for analysis
+
+# --- Debugging prints for loading paths ---
+print(f"Project root: {PROJECT_ROOT}")
+print(f"Notebooks directory added to sys.path: {NOTEBOOKS_DIR}")
+print(f"Attempting to load model from: {MODEL_PATH}")
+print(f"Attempting to load metadata from: {METADATA_PATH}")
+print(f"Attempting to load data from: {DATA_PATH}")
+# --- End Debugging prints ---
 
 try:
     model = joblib.load(MODEL_PATH)
@@ -52,6 +63,42 @@ except FileNotFoundError as e:
 except Exception as e:
     print(f"Error loading model or metadata: {e}")
     raise RuntimeError(f"Failed to load model or metadata: {e}")
+
+try:
+    data = pd.read_csv(DATA_PATH)
+    print("Data loaded successfully for analysis!")
+except FileNotFoundError as e:
+    print(f"Error: Data file not found at {DATA_PATH}. Analysis endpoints may not function. {e}")
+    data = None # Explicitly set to None if not found
+except Exception as e:
+    print(f"Error loading data for analysis: {e}")
+    data = None # Explicitly set to None if error
+
+
+# --- Import NEW modular analysis functions ---
+try:
+    from analysis import (
+        create_kde_plot,
+        create_boxplot,
+        create_histogram_with_kde,
+        create_numerical_categorical_barplot,
+        create_numerical_categorical_boxplot,
+        create_numerical_categorical_violin_plot,
+        create_numerical_categorical_stripplot,
+        create_categorical_countplot,
+        create_multivariate_barplot,
+        create_multivariate_boxplot,
+        create_multivariate_violin_plot,
+        create_multivariate_stripplot,
+        create_probplot
+    )
+    print("Modular analysis functions from analysis.py loaded successfully!")
+except ImportError as e:
+    print(f"Error importing modular analysis functions from analysis.py: {e}")
+    # Print sys.path to help debug if the issue persists
+    print(f"Current sys.path: {sys.path}")
+    raise RuntimeError(f"Failed to load analysis functions: {e}")
+
 
 # --- Dynamic Pydantic Model based on metadata ---
 # Extract allowed values for categorical features from metadata for Pydantic validation
@@ -160,3 +207,132 @@ async def predict_delivery_time(data: PredictionInput):
         traceback.print_exc() # Print full Python traceback to Uvicorn console
         raise HTTPException(status_code=500, detail=f"Prediction failed due to an internal server error. Error: {type(e).__name__}: {e}. Check server logs for full traceback.")
 
+import plotly.graph_objects as go
+import plotly.express as px
+import plotly.io as pio # To convert plotly figures to JSON
+
+@app.get("/analysis/charts")
+async def get_analysis_charts():
+    """
+    Generates and returns Plotly charts as JSON for the analysis section.
+    Each key in the returned dictionary will map to a single Plotly chart JSON string.
+    """
+    if data is None:
+        raise HTTPException(status_code=500, detail="Analysis data not loaded. Cannot generate charts.")
+
+    charts = {}
+    try:
+        # Chart 1: Numerical Analysis - Distribution of 'time'
+        # Now we have three separate plots for this, return them as a list under one key
+        numerical_time_plots = []
+        try:
+            fig = create_kde_plot(data, 'time', cat_col='traffic')
+            numerical_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating KDE plot for time: {e}")
+            numerical_time_plots.append(None) # Append None if generation fails for one plot
+
+        try:
+            fig = create_boxplot(data, 'time', cat_col='traffic')
+            numerical_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating Boxplot for time: {e}")
+            numerical_time_plots.append(None)
+
+        try:
+            fig = create_histogram_with_kde(data, 'time', cat_col='traffic', bins=20)
+            numerical_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating Histogram with KDE for time: {e}")
+            numerical_time_plots.append(None)
+
+        charts['time_distribution_plots'] = numerical_time_plots
+
+        # Chart 2: Numerical-Categorical Analysis - Delivery Time by Day of Week
+        # Returning multiple plots for numerical-categorical analysis under one key
+        numerical_categorical_day_time_plots = []
+        try:
+            fig = create_numerical_categorical_barplot(data, "day_of_week", "time")
+            numerical_categorical_day_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating numerical-categorical barplot: {e}")
+            numerical_categorical_day_time_plots.append(None)
+
+        try:
+            fig = create_numerical_categorical_boxplot(data, "day_of_week", "time")
+            numerical_categorical_day_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating numerical-categorical boxplot: {e}")
+            numerical_categorical_day_time_plots.append(None)
+
+        try:
+            fig = create_numerical_categorical_violin_plot(data, "day_of_week", "time")
+            numerical_categorical_day_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating numerical-categorical violin plot: {e}")
+            numerical_categorical_day_time_plots.append(None)
+
+        try:
+            fig = create_numerical_categorical_stripplot(data, "day_of_week", "time")
+            numerical_categorical_day_time_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating numerical-categorical stripplot: {e}")
+            numerical_categorical_day_time_plots.append(None)
+
+        charts['time_by_day_of_week_plots'] = numerical_categorical_day_time_plots
+
+
+        # Chart 3: Categorical Analysis - Traffic Conditions Distribution
+        try:
+            fig = create_categorical_countplot(data, 'traffic')
+            charts['traffic_conditions_chart'] = pio.to_json(fig)
+        except Exception as e:
+            print(f"Error generating traffic_conditions_chart: {e}")
+            charts['traffic_conditions_chart'] = None
+
+        # Chart 4: Multivariate Analysis - Delivery Time by Day and Order Type
+        # Returning multiple plots for multivariate analysis under one key
+        multivariate_plots = []
+        try:
+            fig = create_multivariate_barplot(data, "time", "day_of_week", "order_type")
+            multivariate_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating multivariate barplot: {e}")
+            multivariate_plots.append(None)
+
+        try:
+            fig = create_multivariate_boxplot(data, "time", "day_of_week", "order_type")
+            multivariate_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating multivariate boxplot: {e}")
+            multivariate_plots.append(None)
+
+        try:
+            fig = create_multivariate_violin_plot(data, "time", "day_of_week", "order_type")
+            multivariate_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating multivariate violin plot: {e}")
+            multivariate_plots.append(None)
+
+        try:
+            fig = create_multivariate_stripplot(data, "time", "day_of_week", "order_type")
+            multivariate_plots.append(pio.to_json(fig))
+        except Exception as e:
+            print(f"Error generating multivariate stripplot: {e}")
+            multivariate_plots.append(None)
+
+        charts['multivariate_day_order_type_plots'] = multivariate_plots
+
+        # Chart 5: Probability Plot for Delivery Time
+        try:
+            fig = create_probplot(data['time'], title_text='Probability Plot for Delivery Time')
+            charts['time_probplot'] = pio.to_json(fig)
+        except Exception as e:
+            print(f"Error generating time_probplot: {e}")
+            charts['time_probplot'] = None
+
+        return charts
+
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Failed to generate analysis charts: {type(e).__name__}: {e}")

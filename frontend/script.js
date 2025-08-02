@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // IMPORTANT: Replace this with the actual URL of your deployed FastAPI backend
     // For local development, it might be http://127.0.0.1:8000 or http://localhost:8000
     // On Render, it will be something like https://your-fastapi-app-name.onrender.com
-const BACKEND_API_URL = 'https://food-delivery-time-estimation-qnri.onrender.com';
+// const BACKEND_API_URL = 'https://food-delivery-time-estimation-qnri.onrender.com';
+
+const BACKEND_API_URL = 'https://food-delivery-time-estimation-qnri.onrender.com'
 
     predictBtn.addEventListener('click', async () => {
         // Disable the button and show loading
